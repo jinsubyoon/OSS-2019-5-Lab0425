@@ -9,6 +9,7 @@ SPOILER="I watched Avengers: Endgame."
 
 while ((1))
 do
+	sleep 2
 	if [[ $start != $SECONDS ]]
 	then
 		echo "$SECONDS"
@@ -23,5 +24,6 @@ do
 			continue
 		fi
 	fi
+	
 done
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 prev=a
-
+ALEART="Spoiler Alert!"
 while ((1))
 do
 	if [[ -e log.txt ]]
@@ -9,7 +9,16 @@ do
 		cur=$( tail -n 1 log.txt )
 		if [[ $cur != $prev ]] 
 		then
-			echo $cur
+			if [[ "$cur" == *"Avengers"* ]];
+			then
+  			      echo $ALEART
+		        fi
+
+			if [[ "$cur" != *"Avengers"* ]];
+			then 
+				echo $cur
+			fi
+			#echo $cur
 			prev=$cur
 		fi
 	fi
